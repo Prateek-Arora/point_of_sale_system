@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="~/resources/css/style.css">
+    <link rel="stylesheet" href="~/vendors/css/Grid.css">
+    <link rel="stylesheet" href="~/vendors/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="rows">
+          <img src="resources/css/img/pos_logo.jpg" alt="Pos logo" class="logo">
+          <ul class="main-nav" >
+            <li> <a href="Default.aspx#home_page">Home</a> </li>
+            <li> <a href="Default.aspx#about_us">About Us</a></li>
+            <li> <a href="Default.aspx#help">Help</a> </li>
+            <li> <a href="login_page.aspx">Login / Sign Up</a> </li>
+          </ul>
+
+        </div>
+      </nav>
+    </header>
+        
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+</body>
+</html>
